@@ -1,0 +1,22 @@
+service: vegasTest # NOTE: update this with your service name
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+
+functions:
+  hello:
+    handler: vegas1.vegas1
+
+    events:
+      - http:
+          path: vegas1
+          method: get
+
+  hello2:
+    handler: vegas2.vegas2
+
+    events:
+      - http:
+          path: vegas2
+          method: get
